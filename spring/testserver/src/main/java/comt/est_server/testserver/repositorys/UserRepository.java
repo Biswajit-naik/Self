@@ -1,4 +1,10 @@
 package comt.est_server.testserver.repositorys;
 
-public interface UserRepository {
+import comt.est_server.testserver.models.User;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UserRepository extends MongoRepository<User, String> {
+    User findByEmail(String email);
 }
