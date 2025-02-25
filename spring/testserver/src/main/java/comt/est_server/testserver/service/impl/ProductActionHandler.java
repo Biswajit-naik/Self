@@ -22,7 +22,7 @@ public class ProductActionHandler implements ProductAction{
     }
 
     @Override
-    @Cacheable("Products")
+//    @Cacheable("Products")
     public List<Product> getallproducts() {
             List<Product> productList = productRepository.findAll();
             return productList;

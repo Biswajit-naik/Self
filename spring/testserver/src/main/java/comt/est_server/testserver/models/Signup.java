@@ -11,10 +11,11 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 public class Signup {
-    String firstname;
-    String lastname;
-    String email;
-    String phonenumber;
-    String Password;
-    String confirmpassword;
+    private String firstname;
+    private String lastname;
+    private String email;
+    private RoleSelector role;
+    private String phonenumber;
+    private String Password;
+    private String confirmpassword;
 }

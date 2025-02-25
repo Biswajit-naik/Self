@@ -11,6 +11,5 @@ public interface UserAction {
     void createuser(User user);
     void updateuser();
     void deleteuser(String email);
-    void login();
 
 }

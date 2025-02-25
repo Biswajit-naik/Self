@@ -7,12 +7,15 @@ import org.springframework.data.annotation.*;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.*;
+
+import java.util.List;
 
 @Getter
 @Setter
-@ToString
-@Document(collection = "users") // Specify the collection name (optional)
+@Document(collection = "users")
+// Specify the collection name (optional)
 public class User {
 
     @Id
@@ -22,6 +25,7 @@ public class User {
     private String email;
     private String phonenumber;
     private String password;
+    private RoleSelector Role;
 
 }
 
